@@ -21,6 +21,17 @@ def assign_grade( average ) :
 
 # return cleaned up result 
 
-# def process_students( student) : 
+def process_students( student) : 
+    """
+    Takes in [name , [scores. ....]] and returns [(name) , (average)  (grade)]
+    """
+    result = []
+
+    for name , scores in student : 
+        avg = calc_average ( scores)
+        grade = assign_grade(avg)
+        result.append ((name , round(avg , 2)  , grade))
+
+    return result    
     
 

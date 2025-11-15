@@ -1,5 +1,6 @@
 # Reads data , handle missing files and invalid data 
 
+
 def read_data ( file_path ) : 
     #  an empty list to store the cleaned data after reading
     cleaned_data = []
@@ -33,16 +34,13 @@ def read_data ( file_path ) :
                 
 
             if not cleaned_data : 
-                raise ValueError("File is empty")        
+                raise ValueError("File is empty")       
+             
             return cleaned_data
             
             
     except FileNotFoundError : 
         print("File not found")      
 
-input_file = "/home/zynx/Documents/student-perfomance-tracker/data/raw_scores.csv"
 
-show_file = read_data(input_file)
-
-print(show_file)
 

@@ -1,0 +1,10 @@
+Name	Average	Grade
+==============================
+['John']	87.75	A
+['Jane']	91.5	A
+['Paul']	45.75	D
+['Anna']	50.5	D
+['David']	76.0	A
+['Lucy']	65.0	B
+['Mark']	67.0	B
+['Sophia']	97.75	A
