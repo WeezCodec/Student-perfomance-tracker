@@ -1,37 +1,27 @@
-# modules /graders.py
+# modules / grader.py
 
-def calc_average (scores) : 
-    # return average of a list of scores.
-    return sum ( scores) / len ( scores)
+class Student : 
+    def __init__ (self , name , scores ) : 
+        self.name = name 
+        self.scores = scores 
+        self.average = 0
+        self.grade = ""
 
+    def calc_average( self )  : 
+        self.average = sum(self.scores) / len(self.scores)
 
-def assign_grade( average ) : 
-    # assigns grade to the average scores collected from the list.
-    if average >= 75 :
-        return "A"
-    elif average >= 65 : 
-        return "B"
-    elif average >= 55 : 
-        return "C"
-    elif average >= 45 : 
-        return "D"
-    else : 
-        return "F"
-    
+    def assign_grade(self) : 
+        avg = self.average
 
-# return cleaned up result 
-
-def process_students( student) : 
-    """
-    Takes in [name , [scores. ....]] and returns [(name) , (average)  (grade)]
-    """
-    result = []
-
-    for name , scores in student : 
-        avg = calc_average ( scores)
-        grade = assign_grade(avg)
-        result.append ((name , round(avg , 2)  , grade))
-
-    return result    
-    
-
+        if avg >= 75 : 
+            self.grade = "A"
+        elif avg >= 65 : 
+            self.grade = "B"
+        elif avg >= 55 : 
+            self.grade ="C"
+        elif avg >= 45 :
+            self.grade = "D"
+        elif avg >= 40 : 
+            self.grade = "E"
+        else : 
+            self.grade = "F"
