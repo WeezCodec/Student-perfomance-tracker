@@ -7,7 +7,7 @@ def main() :
     print("======== Student Perfomance Tracker ========")
     print("Processing ... Please wait ")
 
-process_scores("/home/zynx/Documents/student-perfomance-tracker/data/raw_scores.csv")
+    process_scores("/home/zynx/Documents/student-perfomance-tracker/data/raw_scores.csv")
 
 
 if __name__  ==  "__main__" :

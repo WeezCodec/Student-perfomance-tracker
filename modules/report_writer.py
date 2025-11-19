@@ -1,8 +1,7 @@
 # modules / report_writer.py
 
-from grader import Student
-from file_handler import read_data
-import os
+from modules.grader import Student
+from modules.file_handler import read_data
 import csv
 
 
@@ -19,21 +18,21 @@ def process_scores(input_file) :
 
 
   # Ensures report folder exists
-    try : 
-        os.mkdir("reports" , exist_ok = True)
-        output_file = "reports/student-perfomance-tracker-results.csv"
 
-        with open(output_file , "w" , newline= "") as file : 
+    try : 
+
+        output_file = "student-perfomance-tracker-results.csv"
+
+        with open(output_file , "w" , newline= '') as file : 
             content = csv.writer ( file )
             content.writerow(["Name" , "Average" , "Grade"])
             
-            for s in Student : 
+            for s in result : 
                 content.writerow([s.name , f"{s.average:.2f}", s.grade])
 
         print(f"Report generated : {output_file}")         
 
     except Exception as e : 
         print("Error while writing to file {e}")
-
         
 
